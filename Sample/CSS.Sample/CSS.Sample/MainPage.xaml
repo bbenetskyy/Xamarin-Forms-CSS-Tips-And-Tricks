@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Shell  xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CSS.Sample"
+             xmlns:views="clr-namespace:CSS.Sample.Views"
              x:Class="CSS.Sample.MainPage">
 
     <ShellItem Title="Login Page">
@@ -21,14 +21,7 @@
     <ShellItem Title="Badges List">
         <ShellSection>
             <ShellContent>
-                <ContentPage>
-                    <StackLayout>
-                        <!-- Place new controls here -->
-                        <Label Text="Badges Page" 
-                           HorizontalOptions="Center"
-                           VerticalOptions="CenterAndExpand" />
-                    </StackLayout>
-                </ContentPage>
+                <views:BadgesPage/>
             </ShellContent>
         </ShellSection>
     </ShellItem>

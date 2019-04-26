@@ -4,25 +4,29 @@
              xmlns:local="clr-namespace:CSS.Sample"
              xmlns:components="clr-namespace:CSS.Sample.Components"
              x:Class="CSS.Sample.Views.BadgesPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <ListView SelectionMode="None"
-                      HasUnevenRows="True"
-                      SeparatorColor="Transparent"
-                      ItemsSource="{Binding Source={x:Static local:FakeDataProvider.FakeBadges}}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <components:BadgeButton Title="{Binding Title}"
-                                               Value="{Binding Value}"
-                                               ValueColor="{Binding ValueColor}" />
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
-    </ContentPage.Content>
+    <ContentPage.Resources>
+        <StyleSheet Source="../Styles/css/Components.css" />
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label Text="A list of GitHub Badgets."
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+        <Label Text="(These are not clickable)"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand" />
+        <ListView SelectionMode="None"
+                  HasUnevenRows="True"
+                  SeparatorColor="Transparent"
+                  ItemsSource="{Binding Source={x:Static local:FakeDataProvider.FakeBadges}}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <components:BadgeButton Title="{Binding Title}"
+                                                Value="{Binding Value}"
+                                                ValueColor="{Binding ValueColor}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Sample/.vs/CSS.Sample/v16/Server/sqlite3
+/Sample/CSS.Sample/CSS.Sample/obj
+/Sample/CSS.Sample/CSS.Sample/bin/Debug/netstandard2.0
+/Sample/CSS.Sample/CSS.Sample.Android/bin/Debug
+/Sample/CSS.Sample/CSS.Sample.Android/obj
+/Sample/CSS.Sample/CSS.Sample.iOS/bin/iPhoneSimulator/Debug
+/Sample/CSS.Sample/CSS.Sample.iOS/obj

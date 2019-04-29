@@ -1,0 +1,29 @@
+﻿label {
+  font-size: 24;
+}
+
+.badgeButton {
+  -xf-orientation: horizontal;
+  margin: 5;
+  -xf-spacing: 0;
+}
+
+.badgeButton > #titleContainer {
+  background-color: black;
+}
+
+.badgeButton > #titleContainer > label {
+  margin: 5;
+  font-size: medium;
+  color: white;
+}
+
+.badgeButton > #valueContainer {
+  background-color: green;
+}
+
+.badgeButton > #valueContainer > label {
+  margin: 5;
+  font-size: medium;
+  color: white;
+}

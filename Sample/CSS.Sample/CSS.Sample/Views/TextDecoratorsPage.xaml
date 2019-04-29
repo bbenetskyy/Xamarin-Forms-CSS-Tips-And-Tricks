@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSS.Sample.Views.TextDecoratorsPage">
+    <ContentPage.Resources>
+        <StyleSheet Source="../Styles/css/Components.css" />
+        <StyleSheet Source="../Styles/css/TextDecoratorsPage.css" />
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label Text="Welcome to Xamarin.Forms Text decorations" StyleClass="titleLabel" />
+        <Label Text="This is underlined text."
+               StyleId="underlineLabel"/>
+        <Label Text="This is text with strikethrough."
+               StyleId="strikeThroughLabel"/>
+        <Label Text="This is underlined text with strikethrough."
+               StyleId="mixedLabel" />
+        <Label Text="Text Formatted by Span with inline styles"
+               StyleClass="headerLabel"/>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="This just " />
+                    <Span Text="cool inline "
+                          TextDecorations="Strikethrough" />
+                    <Span Text="text."
+                          TextColor="Aquamarine" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="Text Formatted by Span with CSS styles"
+               StyleClass="headerLabel" />
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="This just " />
+                    <Span Text="cool inline "
+                          StyleId="strikeThroughLabel"/>
+                    <Span Text="text." 
+                          StyleId="aquaLabel"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>

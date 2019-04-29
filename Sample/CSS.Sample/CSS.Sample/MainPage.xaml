@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell  xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:views="clr-namespace:CSS.Sample.Views"
+        x:Class="CSS.Sample.MainPage">
+
+    <ShellItem Title="Home Page">
+        <ShellSection>
+            <ShellContent>
+                <views:HomePage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+
+    <ShellItem Title="Badges List">
+        <ShellSection>
+            <ShellContent>
+                <views:BadgesPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+
+    <ShellItem Title="Text Decorators Page">
+        <ShellSection>
+            <ShellContent>
+                <views:TextDecoratorsPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+
+    <ShellItem Title="Card Page">
+        <ShellSection>
+            <ShellContent>
+                <views:CardPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+</Shell>

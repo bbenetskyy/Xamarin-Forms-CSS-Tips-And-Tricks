@@ -27,4 +27,12 @@
             </ShellContent>
         </ShellSection>
     </ShellItem>
+
+    <ShellItem Title="Card Page">
+        <ShellSection>
+            <ShellContent>
+                <views:CardPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
 </Shell>

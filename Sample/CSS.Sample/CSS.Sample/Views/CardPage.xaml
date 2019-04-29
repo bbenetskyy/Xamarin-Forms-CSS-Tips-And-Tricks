@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="CSS.Sample.Views.CardPage">
+    <ContentPage.Resources>
+        <StyleSheet Source="../Styles/css/CardPage.css" />
+    </ContentPage.Resources>
+    <StackLayout>
+        <Frame StyleClass="frame"
+               HorizontalOptions="Center"
+               HasShadow="True">
+            <StackLayout>
+                <ffimageloading:CachedImage Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr2ZUO3i5IHnFTBwyP2cImFri4Hc9zb6f-WqmRI12cpCmAZ80K">
+                    <ffimageloading:CachedImage.Transformations>
+                        <fftransformations:CircleTransformation />
+                    </ffimageloading:CachedImage.Transformations>
+                </ffimageloading:CachedImage>
+                <Label StyleClass="headerLabel"
+                       HorizontalTextAlignment="Center"
+                       Text="Amazing Title" />
+                <BoxView StyleClass="splitterBox"
+                         HorizontalOptions="FillAndExpand" />
+                <Label StyleClass="detailsLabel"
+                       HorizontalTextAlignment="Center"
+                       Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo." />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

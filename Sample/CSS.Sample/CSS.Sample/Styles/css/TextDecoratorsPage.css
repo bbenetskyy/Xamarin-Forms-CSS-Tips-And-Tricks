@@ -1,11 +1,25 @@
-.underlineLabel {
+#underlineLabel {
     text-decoration: underline;
 }
 
-.strikeThroughLabel {
+#strikeThroughLabel {
     text-decoration: strikethrough;
 }
 
-.mixedLabel {
+#mixedLabel {
     text-decoration: underline, strikethrough;
+}
+
+.headerLabel {
+    margin: 40;
+    font-style: italic;
+    color: coral;
+}
+
+#aquaLabel {
+    color: aquamarine;
+}
+
+.titleLabel {
+    margin: 40;
 }

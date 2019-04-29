@@ -20,4 +20,11 @@
         </ShellSection>
     </ShellItem>
 
+    <ShellItem Title="Text Decorators Page">
+        <ShellSection>
+            <ShellContent>
+                <views:TextDecoratorsPage />
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
 </Shell>

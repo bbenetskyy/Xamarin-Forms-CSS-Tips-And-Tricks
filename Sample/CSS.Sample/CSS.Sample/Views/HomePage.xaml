@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSS.Sample.Views.HomePage">
+       <ContentPage.Resources>
+              <StyleSheet Source="../Styles/css/Components.css" />
+       </ContentPage.Resources>
+       <StackLayout>
+              <Label Text="Welcome to Xamarin.Forms!"
+                     HorizontalOptions="CenterAndExpand" />
+              <Label Text="Please go through all other pages and look at styles that were applied."
+                     HorizontalOptions="CenterAndExpand" />
+              <Label Text="This Page does not have specific CSS styling. Only base shared CSS."
+                     HorizontalOptions="CenterAndExpand" />
+       </StackLayout>
+</ContentPage>

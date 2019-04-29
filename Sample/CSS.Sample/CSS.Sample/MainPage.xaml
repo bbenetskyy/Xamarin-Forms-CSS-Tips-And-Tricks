@@ -4,20 +4,14 @@
         xmlns:views="clr-namespace:CSS.Sample.Views"
         x:Class="CSS.Sample.MainPage">
 
-    <ShellItem Title="Login Page">
+    <ShellItem Title="Home Page">
         <ShellSection>
             <ShellContent>
-                <ContentPage>
-                    <StackLayout>
-                        <!-- Place new controls here -->
-                        <Label Text="First Page"
-                               HorizontalOptions="Center"
-                               VerticalOptions="CenterAndExpand" />
-                    </StackLayout>
-                </ContentPage>
+                <views:HomePage />
             </ShellContent>
         </ShellSection>
     </ShellItem>
+
     <ShellItem Title="Badges List">
         <ShellSection>
             <ShellContent>

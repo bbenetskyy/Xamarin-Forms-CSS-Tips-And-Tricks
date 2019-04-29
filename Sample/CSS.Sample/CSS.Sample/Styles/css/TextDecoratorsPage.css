@@ -1,0 +1,11 @@
+.underlineLabel {
+    text-decoration: underline;
+}
+
+.strikeThroughLabel {
+    text-decoration: strikethrough;
+}
+
+.mixedLabel {
+    text-decoration: underline, strikethrough;
+}

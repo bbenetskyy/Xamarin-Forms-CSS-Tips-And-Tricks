@@ -15,33 +15,23 @@ namespace CSS.Sample
 
         static FakeDataProvider()
         {
-            FakeBadges = new List<FakeDataProvider>
+            var random = new Random();
+            var nn = 0x128;
+            var ff = 0x512;
+            FakeBadges = new List<FakeDataProvider>();
+
+            for (var i = 0; i < 150; i++)
             {
-                new FakeDataProvider
-                {
-                    Title = "Azure Pipelines",
-                    Value = "succeeded",
-                    ValueColor = Color.LawnGreen
-                },
-                new FakeDataProvider
-                {
-                    Title = "codefactor",
-                    Value = "A",
-                    ValueColor = Color.ForestGreen
-                },
-                new FakeDataProvider
-                {
-                    Title = "coverage",
-                    Value = "79%",
-                    ValueColor = Color.DarkRed
-                },
-                new FakeDataProvider
+                var randomColor = Color.FromRgb((byte) random.Next(nn, ff),
+                    (byte) random.Next(nn, ff), (byte) random.Next(nn, ff));
+
+                FakeBadges.Add(new FakeDataProvider
                 {
                     Title = "NuGet",
-                    Value = "v1.5",
-                    ValueColor = Color.CornflowerBlue
-                },
-            };
+                    Value = $"v{i}.{random.Next(1,++i)}.{random.Next(1, ++i)}",
+                    ValueColor = randomColor
+                });
+            }
         }
     }
 }

@@ -11,9 +11,6 @@
         <Label Text="A list of GitHub Badgets."
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand" />
-        <Label Text="(These are not clickable)"
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand" />
         <ListView SelectionMode="None"
                   HasUnevenRows="True"
                   SeparatorColor="Transparent"

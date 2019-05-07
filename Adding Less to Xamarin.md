@@ -77,6 +77,16 @@ gulp.task('watch', function () {
     gulp.watch('./Styles/*.less', ['less']);
 });
 ```
+✨ If we watch that files, after each saving any of that files it automatically run `less` task
+
+⚠️ If it was saved with compilation error than we will have exception at task output:
+```
+Potentially unhandled rejection [2] Unrecognised input in file C:\Work\Xamarin-Forms-CSS-Tips-And-Tricks\Sample\CSS.Sample\CSS.Sample\Styles\CardPage.less line no. 18
+```
+After it we should kill that task and run again, because it will not looking for any changes in files anymore
 
 * Setup Default task:
-
+```js
+gulp.task('default', ['less', 'watch']);
+```
+Now your project can use `Less` files ✔️

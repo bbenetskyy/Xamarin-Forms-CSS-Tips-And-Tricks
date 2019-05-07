@@ -11,6 +11,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="node_modules\**" />
+    <Compile Remove="Styles\node_modules\**" />
+    <EmbeddedResource Remove="node_modules\**" />
+    <EmbeddedResource Remove="Styles\node_modules\**" />
+    <None Remove="node_modules\**" />
+    <None Remove="Styles\node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Styles\Components.less" />
+    <None Remove="Styles\TextDecoratorsPage.less" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Styles\Components.less" />
+    <EmbeddedResource Include="Styles\TextDecoratorsPage.less" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.5.922" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.5.922" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.346134-pre9" />

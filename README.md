@@ -7,7 +7,7 @@ Examples could be done in pure CSS or in LESS, because now Xamarin.Forms support
 
 ## Stories:
 
-* Adding LESS to Xamarin.Forms.
+* [Adding LESS to Xamarin.Forms.](https://github.com/bbenetskyy/Xamarin-Forms-CSS-Tips-And-Tricks/blob/master/Adding%20Less%20to%20Xamarin.md)
 * Inherited Selectors for better design understanding.
 * Component Segregation in Styles.
 * How to select base class in LESS.

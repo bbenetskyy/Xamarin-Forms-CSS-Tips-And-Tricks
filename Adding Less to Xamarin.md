@@ -90,3 +90,19 @@ After it we should kill that task and run again, because it will not looking for
 gulp.task('default', ['less', 'watch']);
 ```
 Now your project can use `Less` files ✔️
+
+## How to compile Less files to CSS after each time it's saved?
+
+It was described in previous question. In brief:
+* Add to your `devDependencies` reference to gulp watch: `"gulp-watch": "^5.0.1",`
+* Make subscriptions to some files and after each time they are saved run tasks that you need:
+```js
+gulp.task('watch', function () {
+    gulp.watch('./Styles/*.less', ['array', 'of', 'tasks','to','build','less']);
+});
+```
+* If you want to have if with some other tasks you can put to `default`:
+```js
+gulp.task('default', ['less', 'watch']);
+```
+Now it will run as `default` the `less` task and after it your `watch` task that will be looking for changes in `Less` files

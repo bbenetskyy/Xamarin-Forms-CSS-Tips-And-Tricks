@@ -12,3 +12,6 @@
 /Sample/CSS.Sample/CSS.Sample/Styles/node_modules
 /Sample/.vs/CSS.Sample
 /Sample/CSS.Sample/CSS.Sample/node_modules
+/Sample/CSS.Sample.Less/node_modules
+/Sample/CSS.Sample.Less/obj
+/Sample/CSS.Sample.Less/bin/Debug/netcoreapp2.1

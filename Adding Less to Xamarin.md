@@ -89,7 +89,7 @@ After it we should kill that task and run again, because it will not looking for
 ```js
 gulp.task('default', ['less', 'watch']);
 ```
-Now your project can use `Less` files ✔️
+✔️ Now your project can use `Less` files 
 
 ## How to compile Less files to CSS after each time it's saved?
 
@@ -106,3 +106,46 @@ gulp.task('watch', function () {
 gulp.task('default', ['less', 'watch']);
 ```
 Now it will run as `default` the `less` task and after it your `watch` task that will be looking for changes in `Less` files
+
+## Can we move gulpfile to separate project but Less file left in Forms project?
+
+Sure, we easy can do that. We need only few steps to migrate `gulpfile`:
+* Create new Class Library, .Net Standard Class Library
+
+<img src="Images/New_Class_Lib.png"/>
+
+* Set name, best option I think will be `"{Your App Name}.Less"`
+
+<img src="Images/New_Class_Lib_Name.png" />
+
+* Remove default `Class1.cs` file
+
+<img src="Images/Remove_Default_cs.png" />
+
+* Move `node_modules`; `gulpfile.js` and `package.json` to your new project:
+
+<img src="Images/Less_Project_Files.png" />
+
+⚠️ **_Good option here is after moving exclude `node_modules` from project, it will not crash anything but speedup performance of Visual Studio_**
+
+* Update path to `Styles` folder:
+```js
+var gulp = require("gulp"),
+    less = require("gulp-less");
+var styleFolderPath = "../CSS.Sample/CSS.Sample/Styles/";
+
+gulp.task('less', function () {
+    return gulp.src([styleFolderPath + '!Colors.less', styleFolderPath + '*.less'])
+        .pipe(less())
+        .pipe(gulp.dest(styleFolderPath + 'css'));
+});
+
+gulp.task('watch', function () {
+    gulp.watch(styleFolderPath + '*.less', ['less']);
+});
+
+gulp.task('default', ['less', 'watch']);
+```
+✨ Here we provide `styleFolderPath` variable to reduce nesting changes if in future path will change and make tasks more readable 
+
+✔️ Now you can focus on your Forms project without any trash files inside and look into `Less` project only if you need to change gulp tasks.

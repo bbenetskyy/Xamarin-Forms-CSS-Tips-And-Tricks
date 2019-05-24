@@ -1,9 +1,15 @@
-﻿.frame {
+﻿@import "Colors.less";
+
+@{base}contentPage {
+    background-color: @ModernBackground;
+}
+
+.frame {
     margin: 15,50,15,0;
     border-radius: 15;
-    border-color: #7A9999;
-    background-color: #516969;
-    width: 200;
+    border-color: @DefaultBorder;
+    background-color: @DarkBackground;
+    width: 200; 
 }
 
 frame > stackLayout {
@@ -13,18 +19,18 @@ frame > stackLayout {
 
 .splitterBox {
     height: 1;
-    background-color: Black;
+    background-color: @BlackBackground;
 }
 
 .headerLabel {
     font-size: large;
     font-style: bold;
-    color: #b9cdcd;
+    color: @DarkText;
 }
 
 .detailsLabel {
     flex-wrap: nowrap;
     max-lines: 3;
     font-style: italic;
-    color: #e4f4f4;
+    color: @NeutralText;
 }

@@ -27,14 +27,14 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
-        <Label Text="Text Formatted by Span with CSS styles"
+        <Label Text="Text Formatted by Span with CSS styles:"
                StyleClass="headerLabel" />
         <Label>
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="This just " />
                     <Span Text="cool inline "
-                          StyleId="strikeThroughLabel"/>
+                          StyleId="strikeThroughLabel:"/>
                     <Span Text="text." 
                           StyleId="aquaLabel"/>
                 </FormattedString>

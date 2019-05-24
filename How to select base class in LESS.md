@@ -23,3 +23,15 @@ Yes, we could cheat with variables at LESS.
 2. Evaluate this variable like prefix of your base element: `@{base}contentPage {...}`.
 
 💥 And that's it, now it will compiled in proper CSS: `^contentPage {...}`
+
+## I'm using MvxContentPage from MvvmCross and `^mvxContentPage {...}`  does not work for me. What should I do with it?
+
+This problem is similar to the problem with `Span` elements in CSS. However, custom controls like `CustomButton` could we accessible though `cusomButton` element selector, it will not work for custom pages controls(like `MvxContentPage`).
+
+`MvxContentPage` will be accessible at runtime as `ContentPage` so you could just write:
+```css
+@{base}contentPage {
+    background-color: @ModernBackground;
+}
+```
+And it will work properly 😉

@@ -28,14 +28,11 @@
             </StackLayout>
         </Frame>
 
-        <Frame StyleClass="" HasShadow="True" HorizontalOptions="Center">
+        <Frame StyleClass="weatherFrame" HasShadow="True" HorizontalOptions="Center">
             <StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="~25%" HorizontalTextAlignment="Start"
-                           TextColor="Azure"/>
-                    <Label Text="+17°C"
-                           HorizontalTextAlignment="End"
-                           TextColor="Azure"/>
+                <StackLayout StyleId="temperatureStack">
+                    <Label Text="~25%" HorizontalTextAlignment="Start"/>
+                    <Label Text="+17°C" HorizontalTextAlignment="End"/>
                 </StackLayout>
                 <Label Text="Short Weather Description"/>
                 <Button Text="Refresh"/>

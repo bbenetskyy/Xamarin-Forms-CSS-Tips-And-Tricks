@@ -27,3 +27,24 @@ frame > stackLayout {
   font-style: italic;
   color: #e4f4f4;
 }
+.weatherFrame {
+  margin: 5,25,5,0;
+  background-color: #9464bf;
+  border-radius: 25;
+}
+stackLayout {
+  -xf-spacing: 5;
+  -xf-orientation: vertical;
+}
+#temperatureStack {
+  -xf-spacing: 0;
+  -xf-orientation: horizontal;
+}
+label {
+  color: #f30505;
+}
+button {
+  opacity: 0.5;
+  background-color: #516969;
+  color: #e4f4f4;
+}

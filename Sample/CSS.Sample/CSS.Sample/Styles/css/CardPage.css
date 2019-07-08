@@ -42,9 +42,12 @@ stackLayout {
 }
 label {
   color: #f30505;
+  margin: 10;
 }
 button {
   opacity: 0.5;
   background-color: #516969;
   color: #e4f4f4;
+  border-radius: 15;
+  border-width: 5;
 }
